@@ -1,0 +1,222 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+
+
+/*********************
+TRANSITION
+*********************/
+
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+
+@mixin transition($transition...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit-", "" );
+  @each $prefix in $prefixes {
+    #{$prefix}transition: $transition;
+  }
+}
+
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+/*********************
+BOX SIZING
+*********************/
+
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+@mixin box-sizing($type: border-box) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing:    $type;
+	-ms-box-sizing:     $type;
+	box-sizing:         $type;
+}
+
+/*********************
+BOX SIZING
+*********************/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin border-top-radius($radius) {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+/*********************
+FILTERS
+*********************/
+@mixin filter-brightness($value) {
+    -webkit-filter: brightness($value);
+    -moz-filter: brightness($value);
+    -o-filter: brightness($value);
+    -ms-filter: brightness($value);
+    filter: brightness($value);
+}
+
+/*********************
+COMMON TOOLS
+*********************/
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/*********************
+MODAL
+*********************/
+
+@mixin modal-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    &.md-show {
+        visibility: visible;
+    }
+
+    .md-content {
+        color: #fff;
+        background: #e74c3c;
+        position: relative;
+        border-radius: 3px;
+        margin: 0 auto;
+
+        h3 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight:bold;
+            margin-bottom:0;
+        }
+
+    }
+
+    &.md-effect-5 {
+        -webkit-perspective: 1300px;
+        -moz-perspective: 1300px;
+        perspective: 1300px;
+
+        .md-content {
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: translateZ(600px) rotateX(20deg);
+            -moz-transform: translateZ(600px) rotateX(20deg);
+            -ms-transform: translateZ(600px) rotateX(20deg);
+            transform: translateZ(600px) rotateX(20deg);
+            opacity: 0;
+        }
+
+        &.md-show {
+
+            .md-content {
+                @include transition(all 0.3s ease-in);
+                -webkit-transform: translateZ(0px) rotateX(0deg);
+                -moz-transform: translateZ(0px) rotateX(0deg);
+                -ms-transform: translateZ(0px) rotateX(0deg);
+                transform: translateZ(0px) rotateX(0deg);
+                opacity: 1;
+            }
+
+        }
+
+    }
+
+}
+
+@mixin modal-load {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/// Vertically centers the element inside of its first non-static parent,
+/// @link http://www.sitepoint.com/centering-with-sass/ Centering With Sass
+@mixin vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

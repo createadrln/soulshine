@@ -1,0 +1,35 @@
+.ninja-forms-form-wrap {
+
+    .field-wrap {
+
+        &.name-wrap {
+            float:left;
+            width:50%;
+
+            input[type="text"] {
+                max-width:90%;
+            }
+
+        }
+
+        &.email-wrap {
+            float:right;
+            width:50%;
+        }
+
+        &.list-checkbox-wrap,
+        &.list-dropdown-wrap {
+
+            &.label-above {
+
+                select {
+                    width: 45%;
+                }
+
+            }
+
+        }
+
+    }
+
+}

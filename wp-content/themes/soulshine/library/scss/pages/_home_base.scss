@@ -1,0 +1,133 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Home Page Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+
+.home {
+
+  .main-banner {
+    display: block;
+    position: relative;
+
+    &::after {
+      background-color: $black;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      left: 0;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &__overlay {
+      @include vertical-center;
+      padding: $global-padding;
+      width: 100%;
+      z-index: 3;
+
+      h1 {
+        border-bottom: 0;
+        color: $white;
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &-section {
+    font-size: 1.5rem;
+
+    h2,
+    p {
+      margin: 0;
+    }
+
+    p {
+
+      + p {
+        margin: $global-margin 0 0;
+      }
+    }
+  }
+
+  &-section__about {
+    background-color: $brand-orange;
+    padding: ($global-padding * 4) 0;
+
+    .container_inner-content {
+
+      h2 {
+        color: $white;
+      }
+
+      p {
+        color: $white;
+        text-align: center;
+      }
+    }
+  }
+
+  &-section__signup {
+    text-align: center;
+    padding: ($global-padding * 2) 0;
+
+    .input-box {
+      margin: $global-margin 0 0;
+
+      .email {
+        display: inline-block;
+      }
+    }
+
+    .actions {
+      margin: $global-margin 0;
+
+      .button {
+        display: inline-block;
+        font-size: 2rem;
+        padding: $global-padding ($global-padding * 2);
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#footer-content {
+  margin-top: 40px;
+
+  .widgettitle {
+    color: $text-color;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  li.widget_grid_widget {
+    border: none;
+    list-style: none;
+    padding: 0;
+
+    ul li {
+      margin: 0.375em 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .ri-shadow:after,
+  .ri-shadow:before {
+    display: none;
+  }
+
+  .ri-grid {
+    margin: .375em auto;
+  }
+
+}

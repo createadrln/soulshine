@@ -1,0 +1,148 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Extensions
+
+Here is where we override any settings from plugins CSS.
+
+******************************************************************/
+
+.mc4wp-form {
+    margin:0;
+
+    label {
+        display:none;
+        font-weight:300;
+    }
+
+}
+
+.ninja-forms-form-wrap {
+
+    .label-above label {
+        margin-bottom:20px;
+    }
+
+    label {
+        font-weight:400 !important;
+    }
+
+    .ninja-forms-required-items {
+        font-size:12px;
+        color: $base-gray;
+        margin-bottom:10px;
+    }
+
+    .ninja-forms-req-symbol {
+        color:$cta-red;
+    }
+
+    .field-wrap {
+        margin-bottom:40px;
+
+        &.name-wrap {
+            width:100%;
+
+            input[type="text"] {
+                max-width:100%;
+            }
+
+        }
+
+        &.email-wrap {
+            width:100%;
+
+            input[type="text"] {
+                max-width:100%;
+            }
+
+        }
+
+        &.list-checkbox-wrap,
+        &.list-dropdown-wrap {
+            clear:both;
+
+            &.label-above {
+
+                select {
+                    width:100%;
+                }
+
+            }
+
+        }
+
+        &.label-left .ninja-forms-field {
+            margin-left:0;
+        }
+
+        select {
+            max-width:100%;
+        }
+
+    }
+
+    input[type="submit"] {
+        -webkit-appearance:none;
+        background: $cta-green;
+        border:none;
+        color:$white;
+        font-size:22px;
+        font-weight:400;
+        padding:10px 30px;
+    }
+
+}
+
+.widget {
+
+    .ninja-forms-form-wrap {
+
+        .field-wrap {
+            margin-bottom:10px;
+        }
+
+        .field-wrap.name-wrap,
+        .field-wrap.email-wrap {
+            float:none;
+            width:100%;
+
+            input[type="text"] {
+                max-width:100%;
+            }
+
+        }
+
+        .label-above label {
+            font-size:16px;
+            color:$base-gray;
+            margin-bottom:5px;
+        }
+
+        .field-wrap.list-checkbox-wrap.label-above select,
+        .field-wrap.list-dropdown-wrap.label-above select {
+            width:100%;
+            font-size:14px;
+        }
+
+    }
+
+}
+
+.fb_iframe_widget {
+    display: block;
+}
+.fb-comments,
+.fb-comments iframe[style],
+.fb-like-box,
+.fb-like-box iframe[style] {
+    width: 100% !important;
+}
+.fb-comments span,
+.fb-comments iframe span[style],
+.fb-like-box span,
+.fb-like-box iframe span[style] {
+    width: 100% !important;
+}
+

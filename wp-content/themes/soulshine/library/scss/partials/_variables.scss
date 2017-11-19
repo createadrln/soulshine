@@ -1,0 +1,72 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow: #ebe16f;
+$alert-red: #f35352;
+$alert-green: #64ba0f;
+$alert-blue: #d5edf8;
+
+$black: #000;
+$white: #fff;
+
+$brand-orange: #f1592a;
+$brand-orange-hover: darken(#f1592a, 10%);
+$brand-rose: #c9446f;
+$brand-rose-hover: darken($brand-rose, 20%);
+$brand-blue: #4197d2;
+$brand-yellow: #d6c83d;
+$brand-green: #a3cd42;
+
+$cta-orange: $brand-orange;
+$cta-orange-hover: darken($brand-orange, 10%);
+$cta-red: #ca1e4b;
+$cta-red-hover: darken($cta-red, 15%);
+$cta-green: $alert-green;
+
+$base-gray: #929487;
+$light-gray: #dedfdb;
+$text-color: #5c6b80;
+$meta-gray: #9fa6b4;
+
+$tan: #eceee5;
+
+$green: #7dd667;
+
+$bones-pink: #f01d4f;
+$blue: #2980b9;
+
+$text-color: $black;
+
+$link-color: darken($brand-blue, 20%);
+$link-hover: darken($brand-blue, 30%);
+
+$border-color: lighten($base-gray, 20%);
+$base-color-border: $light-gray;
+$disabled-gray: #cfcfcf;
+
+$open-sans: 'Source Sans Pro', sans-serif;
+$sans: 'Source Sans Pro', sans-serif;
+$slab: 'Bitter', serif;
+$cursive: 'Contrail One', cursive;
+
+$browser-context: 16;
+
+$global-padding: 1rem;
+$global-margin: 1rem;
+$global-margin-double: 2rem;

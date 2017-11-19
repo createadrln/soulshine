@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cWc_classList{}
+.cWc_classList a.setdefualt{
+	display:none;
+}
+.cWc_classList tr:hover td{
+	background:#CF3;
+}
+.cWc_classList tr:hover a.setdefualt{
+	display:block;
+}
+.cWc_classList .cWc_default{
+	background:#9FF;
+	}
+.cWc_classList .cWc_default  a.setdefualt{
+	display:block;
+	color:#C90;
+}
+table.cwc_addclass td{
+	vertical-align:top;
+	padding:10px 5px;
+	}
+table.cwc_addclass td input[type=text]{
+	width:100%;
+}

@@ -1,0 +1,30 @@
+.page-contact {
+
+    .social {
+
+        a.fa {
+            font-size:22px;
+            width:35px;
+            height:35px;
+            line-height: 35px;
+            text-align: center;
+            text-decoration: none;
+            margin-right:5px;
+            color:$white;
+
+            &.fa-facebook {
+                background: #3b5998;
+            }
+            &.fa-twitter {
+                background: #55acee;
+            }
+            &.fa-instagram {
+                background: #3f729b;
+            }
+
+
+        }
+
+    }
+
+}

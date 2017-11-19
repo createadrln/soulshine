@@ -1,0 +1,115 @@
+.home {
+
+    .main-banner {
+        height:340px;
+        overflow: hidden;
+        text-align: center;
+
+        button.button {
+            bottom:60px;
+            left:50%;
+            margin-left:-155px;
+            height:60px;
+            width:310px;
+            font-size:2em;
+        }
+
+        img {
+            width:100%;
+            height: 345px;
+        }
+
+    }
+
+    .inner-content {
+
+        .t-2of3 {
+            margin-right:0 !important;
+            padding-right:0 !important;
+        }
+
+        .sidebar {
+
+            .widget {
+
+                &.widget_text_training {
+                    margin: 0 0 3px;
+                    min-height:340px;
+
+                    .widget__inner-content {
+                        padding:0 10px;
+
+                        p {
+                            font-size: 18px;
+                        }
+
+                    }
+
+                }
+
+                &.widget_mc4wp_widget {
+                    display:none;
+                }
+
+            }
+
+        }
+
+    }
+
+    .blog-posts {
+
+        .post-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        .post {
+            width:24%;
+            border:1px solid $base-color-border;
+        }
+
+    }
+
+}
+
+.md-modal {
+
+    .md-content {
+
+        h3 {
+            font-size: 30px;
+            padding:0;
+        }
+
+        div#mc_embed_signup {
+
+            p {
+                padding: 0 60px;
+                font-size:18px;
+            }
+
+            .note {
+                font-size:.75em;
+            }
+
+        }
+
+        button.md-close {
+            top:15px;
+        }
+
+    }
+
+}
+
+#footer-content {
+
+    .widgettitle {
+        background: url("../images/svg/instagram-glyph.svg") 100% 50% no-repeat;
+        background-size: 4%;
+        font-size:40px;
+    }
+
+}

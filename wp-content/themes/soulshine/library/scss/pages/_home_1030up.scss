@@ -1,0 +1,67 @@
+.home {
+
+    .inner-content {
+
+        .d-5of7 {
+            margin-right:0 !important;
+            padding-right:0 !important;
+        }
+
+    }
+
+    .main-banner {
+        height: 500px;
+        min-height: inherit;
+
+        button.button {
+            top:auto;
+            bottom:100px;
+            height:100px;
+            width:550px;
+            font-size:2.5em;
+            margin-left:-275px;
+        }
+
+        img {
+            width:100%;
+            height:500px;
+            position: relative;
+            top:auto;
+            left:auto;
+            margin-left:0;
+        }
+
+    }
+
+    .inner-content {
+
+        .sidebar {
+
+            .widget {
+
+                &.widget_text_training,
+                &.widget_text_about {
+                    height: 327px;
+                    min-height: inherit;
+                    margin: 0;
+                }
+
+                &.widget_mc4wp_widget {
+                    display: block;
+                }
+
+                &.widget_text_training {
+
+                    .widget__inner-content {
+                        padding: 0 15px;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
