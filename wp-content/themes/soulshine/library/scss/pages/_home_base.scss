@@ -21,7 +21,7 @@ you can just remove this stylesheet.
       display: inline-block;
       height: 100%;
       left: 0;
-      opacity: .5;
+      opacity: .3;
       position: absolute;
       top: 0;
       width: 100%;
@@ -37,32 +37,65 @@ you can just remove this stylesheet.
       h1 {
         border-bottom: 0;
         color: $white;
-        font-size: 5rem;
+        font-size: 2.75rem;
+        padding: 0 ($global-padding * 10);
+
+        .author {
+          display: block;
+          margin: $global-margin 0 0;
+        }
       }
     }
   }
 
   &-section {
     font-size: 1.5rem;
+    padding: $global-padding * 2;
 
-    h2,
-    p {
-      margin: 0;
+    + .home-section {
+      border-top: 1px solid $light-gray;
+    }
+
+    .section-title {
+      line-height: 1;
+      margin: 0 0 $global-margin;
+      text-decoration: underline;
     }
 
     p {
+      margin: 0;
 
       + p {
         margin: $global-margin 0 0;
       }
     }
+
+    .note {
+      font-size: 80%;
+    }
   }
 
   &-section__about {
-    background-color: $brand-orange;
-    padding: ($global-padding * 4) 0;
+    @include css-gradient($brand-orange, lighten($brand-orange, 15%));
+    position: relative;
+
+    &::after {
+      background: url('../../library/images/home-about-us-background-texture.jpg') 50% 0 no-repeat;
+      background-size: cover;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      left: 0;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
 
     .container_inner-content {
+      position: relative;
+      z-index: 2;
 
       h2 {
         color: $white;
@@ -73,17 +106,50 @@ you can just remove this stylesheet.
         text-align: center;
       }
     }
+
+    &-rachael {
+      padding: 0;
+      position: relative;
+
+      &::after {
+        display: none;
+      }
+
+      .section-title {
+        text-align: left;
+      }
+
+      img {
+        height: auto;
+        float: right;
+        width: 30%;
+      }
+
+      .container_inner-content {
+        @include vertical-center;
+
+        .inner-content {
+          padding: ($global-padding *2) 0;
+          width: 50%;
+        }
+
+        p {
+          text-align: left;
+        }
+      }
+    }
   }
 
-  &-section__signup {
+  &-section__form {
     text-align: center;
-    padding: ($global-padding * 2) 0;
 
     .input-box {
       margin: $global-margin 0 0;
 
       .email {
-        display: inline-block;
+        height: 65px;
+        line-height: 65px;
+        margin: 0 auto;
       }
     }
 

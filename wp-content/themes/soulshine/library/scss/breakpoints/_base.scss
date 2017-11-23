@@ -297,7 +297,8 @@ HEADER STYLES
 
   &__logo {
     display: inline-block;
-    max-width: 250px;
+    line-height: 0;
+    max-width: 200px;
     vertical-align: middle;
 
     img {
@@ -308,8 +309,7 @@ HEADER STYLES
 }
 
 #inner-header {
-  padding: ($global-padding / 2) $global-padding;
-  width: 100%;
+  padding: ($global-padding / 4) 0;
 }
 
 .quick-links {

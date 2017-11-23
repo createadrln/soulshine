@@ -1996,19 +1996,19 @@ HEADER STYLES
 /* line 298, ../scss/breakpoints/_base.scss */
 .header__logo {
   display: inline-block;
-  max-width: 250px;
+  line-height: 0;
+  max-width: 200px;
   vertical-align: middle;
 }
-/* line 303, ../scss/breakpoints/_base.scss */
+/* line 304, ../scss/breakpoints/_base.scss */
 .header__logo img {
   height: auto;
   width: 100%;
 }
 
-/* line 310, ../scss/breakpoints/_base.scss */
+/* line 311, ../scss/breakpoints/_base.scss */
 #inner-header {
-  padding: 0.5rem 1rem;
-  width: 100%;
+  padding: 0.25rem 0;
 }
 
 /* line 315, ../scss/breakpoints/_base.scss */
@@ -2748,7 +2748,7 @@ you can just remove this stylesheet.
   display: inline-block;
   height: 100%;
   left: 0;
-  opacity: .5;
+  opacity: .3;
   position: absolute;
   top: 0;
   width: 100%;
@@ -2767,88 +2767,167 @@ you can just remove this stylesheet.
 .home .main-banner__overlay h1 {
   border-bottom: 0;
   color: #fff;
-  font-size: 5rem;
+  font-size: 2.75rem;
+  padding: 0 10rem;
 }
-/* line 45, ../scss/pages/_home_base.scss */
+/* line 43, ../scss/pages/_home_base.scss */
+.home .main-banner__overlay h1 .author {
+  display: block;
+  margin: 1rem 0 0;
+}
+/* line 51, ../scss/pages/_home_base.scss */
 .home-section {
   font-size: 1.5rem;
+  padding: 2rem;
 }
-/* line 48, ../scss/pages/_home_base.scss */
-.home-section h2,
+/* line 55, ../scss/pages/_home_base.scss */
+.home-section + .home-section {
+  border-top: 1px solid #dedfdb;
+}
+/* line 59, ../scss/pages/_home_base.scss */
+.home-section .section-title {
+  line-height: 1;
+  margin: 0 0 1rem;
+  text-decoration: underline;
+}
+/* line 65, ../scss/pages/_home_base.scss */
 .home-section p {
   margin: 0;
 }
-/* line 55, ../scss/pages/_home_base.scss */
+/* line 68, ../scss/pages/_home_base.scss */
 .home-section p + p {
   margin: 1rem 0 0;
 }
-/* line 61, ../scss/pages/_home_base.scss */
-.home-section__about {
-  background-color: #f1592a;
-  padding: 4rem 0;
+/* line 73, ../scss/pages/_home_base.scss */
+.home-section .note {
+  font-size: 80%;
 }
-/* line 67, ../scss/pages/_home_base.scss */
+/* line 78, ../scss/pages/_home_base.scss */
+.home-section__about {
+  background-color: #f69172;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f1592a), to(#f69172));
+  background-image: -webkit-linear-gradient(top, #f1592a, #f69172);
+  background-image: -moz-linear-gradient(top, #f1592a, #f69172);
+  background-image: -o-linear-gradient(top, #f1592a, #f69172);
+  background-image: linear-gradient(to bottom, #f1592a, #f69172);
+  position: relative;
+}
+/* line 82, ../scss/pages/_home_base.scss */
+.home-section__about::after {
+  background: url("../../library/images/home-about-us-background-texture.jpg") 50% 0 no-repeat;
+  background-size: cover;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* line 96, ../scss/pages/_home_base.scss */
+.home-section__about .container_inner-content {
+  position: relative;
+  z-index: 2;
+}
+/* line 100, ../scss/pages/_home_base.scss */
 .home-section__about .container_inner-content h2 {
   color: #fff;
 }
-/* line 71, ../scss/pages/_home_base.scss */
+/* line 104, ../scss/pages/_home_base.scss */
 .home-section__about .container_inner-content p {
   color: #fff;
   text-align: center;
 }
-/* line 78, ../scss/pages/_home_base.scss */
-.home-section__signup {
-  text-align: center;
-  padding: 2rem 0;
+/* line 110, ../scss/pages/_home_base.scss */
+.home-section__about-rachael {
+  padding: 0;
+  position: relative;
 }
-/* line 82, ../scss/pages/_home_base.scss */
-.home-section__signup .input-box {
+/* line 114, ../scss/pages/_home_base.scss */
+.home-section__about-rachael::after {
+  display: none;
+}
+/* line 118, ../scss/pages/_home_base.scss */
+.home-section__about-rachael .section-title {
+  text-align: left;
+}
+/* line 122, ../scss/pages/_home_base.scss */
+.home-section__about-rachael img {
+  height: auto;
+  float: right;
+  width: 30%;
+}
+/* line 128, ../scss/pages/_home_base.scss */
+.home-section__about-rachael .container_inner-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 131, ../scss/pages/_home_base.scss */
+.home-section__about-rachael .container_inner-content .inner-content {
+  padding: 2rem 0;
+  width: 50%;
+}
+/* line 136, ../scss/pages/_home_base.scss */
+.home-section__about-rachael .container_inner-content p {
+  text-align: left;
+}
+/* line 143, ../scss/pages/_home_base.scss */
+.home-section__form {
+  text-align: center;
+}
+/* line 146, ../scss/pages/_home_base.scss */
+.home-section__form .input-box {
   margin: 1rem 0 0;
 }
-/* line 85, ../scss/pages/_home_base.scss */
-.home-section__signup .input-box .email {
-  display: inline-block;
+/* line 149, ../scss/pages/_home_base.scss */
+.home-section__form .input-box .email {
+  height: 65px;
+  line-height: 65px;
+  margin: 0 auto;
 }
-/* line 90, ../scss/pages/_home_base.scss */
-.home-section__signup .actions {
+/* line 156, ../scss/pages/_home_base.scss */
+.home-section__form .actions {
   margin: 1rem 0;
 }
-/* line 93, ../scss/pages/_home_base.scss */
-.home-section__signup .actions .button {
+/* line 159, ../scss/pages/_home_base.scss */
+.home-section__form .actions .button {
   display: inline-block;
   font-size: 2rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
 }
 
-/* line 103, ../scss/pages/_home_base.scss */
+/* line 169, ../scss/pages/_home_base.scss */
 #footer-content {
   margin-top: 40px;
 }
-/* line 106, ../scss/pages/_home_base.scss */
+/* line 172, ../scss/pages/_home_base.scss */
 #footer-content .widgettitle {
   color: #000;
   font-size: 24px;
   font-weight: 300;
   margin-top: 0;
 }
-/* line 113, ../scss/pages/_home_base.scss */
+/* line 179, ../scss/pages/_home_base.scss */
 #footer-content li.widget_grid_widget {
   border: none;
   list-style: none;
   padding: 0;
 }
-/* line 118, ../scss/pages/_home_base.scss */
+/* line 184, ../scss/pages/_home_base.scss */
 #footer-content li.widget_grid_widget ul li {
   margin: 0.375em 0;
   margin-bottom: 0;
 }
-/* line 124, ../scss/pages/_home_base.scss */
+/* line 190, ../scss/pages/_home_base.scss */
 #footer-content .ri-shadow:after,
 #footer-content .ri-shadow:before {
   display: none;
 }
-/* line 129, ../scss/pages/_home_base.scss */
+/* line 195, ../scss/pages/_home_base.scss */
 #footer-content .ri-grid {
   margin: .375em auto;
 }
