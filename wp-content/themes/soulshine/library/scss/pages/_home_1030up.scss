@@ -1,36 +1,20 @@
 .home {
 
-    .inner-content {
-
-        .d-5of7 {
-            margin-right:0 !important;
-            padding-right:0 !important;
-        }
-
-    }
-
     .main-banner {
-        height: 500px;
-        min-height: inherit;
+        height: 580px;
 
-        button.button {
-            top:auto;
-            bottom:100px;
-            height:100px;
-            width:550px;
-            font-size:2.5em;
-            margin-left:-275px;
+        &__overlay {
+            padding: $global-padding;
+
+            h1 {
+                font-size: 2.75rem;
+                padding: 0 ($global-padding * 10);
+            }
+
+            .author {
+                margin: $global-margin 0 0;
+            }
         }
-
-        img {
-            width:100%;
-            height:500px;
-            position: relative;
-            top:auto;
-            left:auto;
-            margin-left:0;
-        }
-
     }
 
     .inner-content {
@@ -64,4 +48,37 @@
 
     }
 
+    &-section__about {
+
+        &-rachael {
+            padding: 0 2rem;
+
+            .container_inner-content {
+                @include vertical-center;
+                float: none;
+                width: 100%;
+
+                .inner-content {
+                    padding: ($global-padding *2) 0;
+                    width: 40%;
+                }
+
+                h2 {
+                    font-size: 1.65em;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    &-section_form {
+
+        .inner-content {
+            margin: 0 auto;
+            width: 75%;
+        }
+    }
 }

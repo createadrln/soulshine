@@ -50,6 +50,11 @@ button.button {
   &:active {
   }
 
+  &-large {
+    font-size: 1.75rem;
+    line-height: 60px;
+  }
+
 }
 
 // end .button

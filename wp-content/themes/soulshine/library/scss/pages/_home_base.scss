@@ -29,37 +29,29 @@ you can just remove this stylesheet.
     }
 
     &__overlay {
-      @include vertical-center;
-      padding: $global-padding;
+      padding: 20px;
+      position: relative;
       width: 100%;
       z-index: 3;
 
       h1 {
         border-bottom: 0;
         color: $white;
-        font-size: 2.75rem;
-        padding: 0 ($global-padding * 10);
+        font-size: 1.25rem;
 
         .author {
           display: block;
-          margin: $global-margin 0 0;
         }
       }
     }
   }
 
   &-section {
-    font-size: 1.5rem;
-    padding: $global-padding * 2;
-
-    + .home-section {
-      border-top: 1px solid $light-gray;
-    }
+    font-size: 1.125rem;
 
     .section-title {
       line-height: 1;
-      margin: 0 0 $global-margin;
-      text-decoration: underline;
+      margin: 0 0 2rem;
     }
 
     p {
@@ -94,6 +86,7 @@ you can just remove this stylesheet.
     }
 
     .container_inner-content {
+      padding: 20px;
       position: relative;
       z-index: 2;
 
@@ -103,7 +96,6 @@ you can just remove this stylesheet.
 
       p {
         color: $white;
-        text-align: center;
       }
     }
 
@@ -115,85 +107,48 @@ you can just remove this stylesheet.
         display: none;
       }
 
-      .section-title {
-        text-align: left;
-      }
-
       img {
         height: auto;
-        float: right;
-        width: 30%;
-      }
-
-      .container_inner-content {
-        @include vertical-center;
-
-        .inner-content {
-          padding: ($global-padding *2) 0;
-          width: 50%;
-        }
-
-        p {
-          text-align: left;
-        }
+        width: 100%;
       }
     }
   }
 
   &-section__form {
-    text-align: center;
+    position: relative;
 
-    .input-box {
-      margin: $global-margin 0 0;
+    &::before {
+      background: url('../../library/images/form-bg-pattern.png') 0 0 repeat;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      left: 0;
+      opacity: .35;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
 
-      .email {
-        height: 65px;
-        line-height: 65px;
-        margin: 0 auto;
+    h2 {
+      text-align: center;
+
+      small {
+        display: block;
+        color: $base-gray;
+        font-family: $sans;
+        font-weight: 400;
+        margin: 7px 0 0;
       }
     }
 
-    .actions {
-      margin: $global-margin 0;
-
-      .button {
-        display: inline-block;
-        font-size: 2rem;
-        padding: $global-padding ($global-padding * 2);
-        text-transform: uppercase;
-      }
+    .inner-content {
+      background-color: rgba($white, .7);
+      border: 1px solid $light-gray;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
     }
   }
 }
 
-#footer-content {
-  margin-top: 40px;
-
-  .widgettitle {
-    color: $text-color;
-    font-size: 24px;
-    font-weight: 300;
-    margin-top: 0;
-  }
-
-  li.widget_grid_widget {
-    border: none;
-    list-style: none;
-    padding: 0;
-
-    ul li {
-      margin: 0.375em 0;
-      margin-bottom: 0;
-    }
-  }
-
-  .ri-shadow:after,
-  .ri-shadow:before {
-    display: none;
-  }
-
-  .ri-grid {
-    margin: .375em auto;
-  }
-
-}

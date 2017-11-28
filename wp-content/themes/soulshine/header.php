@@ -73,41 +73,6 @@
         <img src="<?php echo get_stylesheet_directory_uri() ?>/library/images/Soul-Shine-Logo.png" alt="Soul Shine"/>
       </a>
 
-      <nav role="navigation" id="nav-dropdown" class="nav-wrapper toggle closed">
-
-        <div class="mobile-nav-title cf">
-          <div class="title">Menu</div>
-        </div>
-
-        <?php wp_nav_menu(
-          array(
-            'container'       => false,
-            // remove nav container
-            'container_class' => 'menu cf',
-            // class of container (should you choose to use it)
-            'menu'            => __('The Main Menu', 'bonestheme'),
-            // nav name
-            'menu_class'      => 'nav top-nav cf dropdown',
-            // adding custom nav class
-            'theme_location'  => 'main-nav',
-            // where it's located in the theme
-            'before'          => '',
-            // before the menu
-            'after'           => '',
-            // after the menu
-            'link_before'     => '',
-            // before each link
-            'link_after'      => '',
-            // after each link
-            'depth'           => 0,
-            // limit the depth of the nav
-            'fallback_cb'     => ''
-            // fallback function (if there is one)
-          )
-        ); ?>
-
-      </nav>
-
     </div>
 
   </header>
