@@ -11,7 +11,7 @@ Template Name: Home Page
     <div class="container_inner-content">
       <div id="inner-content" class="cf inner-content">
         <div id="main" class="cf" role="main">
-          <section class="main-banner" style="background: url('<?php echo get_stylesheet_directory_uri() ?>/library/images/pexels-photo-357501') no-repeat 50% 50%; background-size: 100% auto;">
+          <section class="main-banner" style="background: url('<?php echo get_stylesheet_directory_uri() ?>/library/images/pexels-photo-357501.jpeg') no-repeat 50% 50%; background-size: 100% auto;">
             <div class="main-banner__overlay">
               <h1 class="page-title"><?php echo __('The greatest challenge of the day is: how to bring about a revolution of the heart, a revolution which has to start with each one of us?') ?>
                 <div class="author"><?php echo __('- Dorothy Day') ?></div>
