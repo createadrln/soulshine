@@ -47,8 +47,8 @@ Template Name: Home Page
       <div class="wrap cf">
         <div class="container_inner-content">
           <div class="inner-content about">
-            <h2 class="section-title">About Rachael</h2>
-            <p>Well hello there! I’m Rachael MacMurray, think of me as your soul sister and that little voice in your ear whispering "you can do it". My mission is to empower the next generation of leaders to step into their greatness and in return find their calling to make the world a better place. I am an entrepreneur, author, activist and all now a podcaster for Soul Shine where we bring you game changers from around the globe to educate, inspire and ignite your soul! Thanks for joining us, let the revolution begin!</p>
+            <h2 class="section-title"><?php echo __('About Rachael'); ?></h2>
+            <p><?php echo __('Well hello there! I’m Rachael MacMurray, think of me as your soul sister and that little voice in your ear whispering "you can do it". My mission is to empower the next generation of leaders to step into their greatness and in return find their calling to make the world a better place. I am an entrepreneur, author, activist and now a podcaster for Soul Shine! We bring you game changers from around the globe to educate, inspire, and ignite your soul! Thanks for joining us, let the revolution begin!'); ?></p>
           </div>
         </div>
         <img src="<?php echo get_stylesheet_directory_uri() ?>/library/images/rachael2.jpg" />
