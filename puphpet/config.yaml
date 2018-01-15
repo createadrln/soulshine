@@ -227,7 +227,7 @@ apache:
         - rewrite
     vhosts:
         av_q6qjmswxv257:
-            servername: soulshine.dev
+            servername: soulshine.local
             docroot: /var/www
             port: '80'
             setenvif:
