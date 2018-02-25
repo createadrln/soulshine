@@ -56,11 +56,11 @@
             .container_inner-content {
                 @include vertical-center;
                 float: none;
-                width: 100%;
+                width: 40%;
 
                 .inner-content {
+                    float: left;
                     padding: ($global-padding *2) 0;
-                    width: 40%;
                 }
 
                 h2 {
@@ -79,6 +79,30 @@
         .inner-content {
             margin: 0 auto;
             width: 75%;
+        }
+    }
+
+    &-section__latest {
+
+        .container_inner-content {
+
+            > div {
+                display: block;
+            }
+        }
+
+        .podcast-grid-item {
+            margin-bottom: 0;
+
+            &:nth-child(2n) {
+                float: left;
+                margin-right: 2%;
+            }
+
+            &:nth-child(4n) {
+                float: right;
+                margin-right: 0;
+            }
         }
     }
 }

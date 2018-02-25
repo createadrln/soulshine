@@ -161,19 +161,23 @@ POSTS & CONTENT STYLES
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 85, ../scss/breakpoints/_481up.scss */
+/* line 83, ../scss/breakpoints/_481up.scss */
+.entry-content .featured-image {
+  max-width: 350px;
+}
+/* line 88, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 90, ../scss/breakpoints/_481up.scss */
+/* line 93, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 95, ../scss/breakpoints/_481up.scss */
+/* line 98, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -237,11 +241,16 @@ h2, .h2 {
   font-size: 1.75em;
 }
 
+/* line 50, ../scss/breakpoints/_768up.scss */
+.single-title {
+  font-size: 2em;
+}
+
 /*********************
 HEADER STYLES
 *********************/
-/* line 54, ../scss/breakpoints/_768up.scss */
-.header {
+/* line 60, ../scss/breakpoints/_768up.scss */
+.home .header {
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   left: 0;
@@ -249,7 +258,7 @@ HEADER STYLES
   z-index: 2;
 }
 
-/* line 64, ../scss/breakpoints/_768up.scss */
+/* line 71, ../scss/breakpoints/_768up.scss */
 .quick-links a {
   font-size: 16px;
   line-height: 22px;
@@ -258,7 +267,7 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 77, ../scss/breakpoints/_768up.scss */
+/* line 84, ../scss/breakpoints/_768up.scss */
 nav .dropdown {
   margin-bottom: 0;
 }
@@ -266,36 +275,36 @@ nav .dropdown {
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 90, ../scss/breakpoints/_768up.scss */
+/* line 97, ../scss/breakpoints/_768up.scss */
 .widgettitle {
   border-bottom: 1px solid #c3c4bd;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
-/* line 96, ../scss/breakpoints/_768up.scss */
+/* line 103, ../scss/breakpoints/_768up.scss */
 .widget {
   padding: 0 10px;
   margin: 0 0 1.250em;
   border: 1px solid #c3c4bd;
 }
-/* line 101, ../scss/breakpoints/_768up.scss */
+/* line 108, ../scss/breakpoints/_768up.scss */
 .widget h4 {
   font-weight: 700;
   color: #929487;
 }
-/* line 110, ../scss/breakpoints/_768up.scss */
+/* line 117, ../scss/breakpoints/_768up.scss */
 .widget.widget_categories ul li {
   font-size: 16px;
   margin-bottom: .5em;
   font-weight: 400;
 }
-/* line 122, ../scss/breakpoints/_768up.scss */
+/* line 129, ../scss/breakpoints/_768up.scss */
 .widget ul li {
   margin-bottom: 0.75em;
   /* deep nesting */
 }
-/* line 133, ../scss/breakpoints/_768up.scss */
+/* line 140, ../scss/breakpoints/_768up.scss */
 .widget ul li ul {
   margin-top: 0.75em;
   padding-left: 1em;
@@ -320,7 +329,7 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
-/* line 361, ../scss/breakpoints/_768up.scss */
+/* line 368, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.

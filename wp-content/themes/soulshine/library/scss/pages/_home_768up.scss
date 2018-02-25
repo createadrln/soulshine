@@ -85,4 +85,23 @@
             }
         }
     }
+
+    &-section__latest {
+
+        .container_inner-content {
+
+            > div {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        .podcast-grid-item {
+
+            &:nth-child(2n) {
+                float: right;
+                margin-right: 0;
+            }
+        }
+    }
 }

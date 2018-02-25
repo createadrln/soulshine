@@ -80,6 +80,9 @@ POSTS & CONTENT STYLES
 /* entry content */
 .entry-content {
 
+	.featured-image {
+		max-width: 350px;
+	}
 
 	/* at this larger size, we can start to align images */
 	.alignleft, img.alignleft {

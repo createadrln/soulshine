@@ -150,5 +150,28 @@ you can just remove this stylesheet.
       z-index: 2;
     }
   }
+
+  &-section__latest {
+
+    .section-title {
+      margin-top: 1em;
+    }
+
+    .podcast-grid-item {
+      margin-bottom: 2em;
+      position: relative;
+      z-index: 3;
+
+      .post-title {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .wp-post-image {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
 }
 

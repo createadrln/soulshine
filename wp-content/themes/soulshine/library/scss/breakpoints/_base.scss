@@ -609,6 +609,7 @@ POSTS & CONTENT STYLES
 }
 
 .single-title {
+  font-size: 1.5em;
 }
 
 .page-title,
@@ -675,32 +676,13 @@ POSTS & CONTENT STYLES
 .entry-content {
   padding: 20px 0 0;
 
+  .featured-image {
+    height: auto;
+    max-width: 500px;
+  }
+
   p {
     margin: 0 0 1.5em;
-  }
-
-  ul, ol, table, dl {
-  }
-
-  ul, ol {
-
-    li {
-    }
-
-  }
-
-  ul {
-
-    li {
-    }
-
-  }
-
-  ol {
-
-    li {
-    }
-
   }
 
   table {
@@ -782,11 +764,17 @@ POSTS & CONTENT STYLES
   and floating images at the next breakpoint,
   but it's up to you. Feel free to change it up.
   */
-  .alignleft, img.alignleft {
+  .alignleft,
+  img.alignleft {
   }
-  .alignright, img.alignright {
+
+  .alignright,
+  img.alignright {
   }
-  .aligncenter, img.aligncenter {
+
+  .aligncenter,
+  img.aligncenter {
+    margin: 0 auto;
   }
 
   .size-auto,

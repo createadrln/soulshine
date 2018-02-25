@@ -31,6 +31,13 @@ Template Name: Home Page
       </div>
     </section>
 
+    <section class="home-section__form home-section__latest home-section">
+      <div class="container_inner-content">
+        <h2 class="section-title"><?php echo __('Newest Episodes'); ?></h2>
+        <?php get_template_part( 'post-formats/format-podcast-list', get_post_format() ); ?>
+      </div>
+    </section>
+
     <section class="home-section__form home-section__form-subscribe home-section">
       <div class="container_inner-content">
         <div class="inner-content wrap cf">
