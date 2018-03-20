@@ -3567,13 +3567,13 @@ you can add resource intensive styles.
     margin: 0 auto;
     width: 75%;
   }
-  /* line 89, ../scss/pages/_home_1030up.scss */
+  /* line 85, ../scss/pages/_home_1030up.scss */
+  .home-section__latest {
+    padding: 2rem 2rem 0;
+  }
+  /* line 90, ../scss/pages/_home_1030up.scss */
   .home-section__latest .container_inner-content > div {
     display: block;
-  }
-  /* line 94, ../scss/pages/_home_1030up.scss */
-  .home-section__latest .podcast-grid-item {
-    margin-bottom: 0;
   }
   /* line 97, ../scss/pages/_home_1030up.scss */
   .home-section__latest .podcast-grid-item:nth-child(2n) {

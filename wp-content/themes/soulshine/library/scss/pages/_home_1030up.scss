@@ -83,6 +83,7 @@
     }
 
     &-section__latest {
+        padding: 2rem 2rem 0;
 
         .container_inner-content {
 
@@ -92,7 +93,6 @@
         }
 
         .podcast-grid-item {
-            margin-bottom: 0;
 
             &:nth-child(2n) {
                 float: left;
