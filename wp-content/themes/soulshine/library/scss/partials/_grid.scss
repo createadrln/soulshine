@@ -97,6 +97,10 @@ them however you see fit.
   .t-1of2 {
     @include grid-col;
     width: 48%;
+
+    &:nth-child(3n) {
+      clear: left;
+    }
   }
 
   .t-1of3 {
@@ -163,11 +167,19 @@ them however you see fit.
   .d-2of3 {
     @include grid-col;
     width: 64.66%;
+
+    &:nth-child(4n) {
+      clear: left;
+    }
   }
 
   .d-1of4 {
     @include grid-col;
     width: 23.5%;
+
+    &:nth-child(5n) {
+      clear: left;
+    }
   }
 
   .d-3of4 {
